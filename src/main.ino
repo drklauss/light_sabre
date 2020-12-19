@@ -86,13 +86,20 @@ void drawLines()
   for (int i = 0; i < TOP_PIXEL_COUNT; i++)
   {
     pixelsTop.setPixelColor(i, currentColor);
-    if (i % 5 == 0)
-    {
-      pixelsSides.setPixelColor(sidesI, currentColor);
-      pixelsSides.show();
-      sidesI++;
-    }
+    // if (i % 5 == 0)
+    // {
+    // pixelsSides.setPixelColor(sidesI, currentColor);
+    // pixelsSides.show();
+    // sidesI++;
+    // }
     pixelsTop.show();
+    delay(50);
+  }
+  delay(500);
+  for (int i = 0; i < SIDES_PIN; i++)
+  {
+    pixelsSides.setPixelColor(i, currentColor);
+    pixelsSides.show();
     delay(50);
   }
 }
